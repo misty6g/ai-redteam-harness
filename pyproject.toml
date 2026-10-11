@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-redteam-harness"
+version = "0.1.0"
+description = "Red-team harness: LLM prompt-injection eval + adversarial-ML robustness on a small CNN"
+authors = [{name = "Gyan Mistry"}]
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
